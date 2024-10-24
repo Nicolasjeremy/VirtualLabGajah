@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Lab Gajah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- !Header (Landing Page) -->
+<header class="land">
+    <h1>GAJAH</h1>
+    <p>“Education is the most powerful weapon which you can use to change the world.”</p>
+    <a href="#tutorial" class="scroll-button">Lihat Tutorial</a>
+</header>
+
+<!-- !Main content area -->
+<main>
+
+    <!-- !Tutorial Section -->
+    <section class="tutorial" id="tutorial">
+        <article class="right-tutorial">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/uEW665GQxaU?si=YAN9Gif4PvfEShvl"
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </article>
+
+        <article class="left-text">
+            <p>Gerak relatif dalam fisika adalah konsep yang menyatakan bahwa gerakan suatu benda tidak mutlak, tetapi bergantung pada titik acuan atau
+                kerangka acuan yang digunakan untuk mengukur gerakan tersebut. Dengan kata lain, gerak suatu benda hanya dapat diukur relatif terhadap
+                benda atau kerangka acuan lain. Jika objek bergerak pada sumbu yang sama, maka kita cukup menjumlahkan atau mengurangkan kecepatannya,
+                tergantung arah geraknya. Jika objek bergerak pada arah yang berbeda, maka kita harus mempertimbangkan komponen-komponen vektornya. </p>
+            <br><br>
+            <p>Pada fisika yang lebih canggih, terutama dalam relativitas khusus yang dikemukakan oleh Albert Einstein, gerak relatif memiliki implikasi
+                yang lebih besar. Relativitas khusus mengajarkan bahwa kecepatan cahaya adalah konstan untuk semua pengamat, terlepas dari kecepatan relatif
+                pengamat atau sumber cahaya. Ini membawa pada konsep dilatasi waktu dan kontraksi panjang.</p>
+        </article>
+    </section>
+
+    <!-- !Virtual Lab Section -->
+    <section class="relative-motion-lab">
+        <h2>Lab Virtual: Gerakan Relatif - Menyeberangi Sungai</h2>
+        <p>Masukkan kecepatan perahu dan lihat apakah perahu bisa mencapai titik tujuan.</p>
+
+        <div class="simulation-container">
+            <canvas id="river-simulation" width="1000" height="600"></canvas>
+            <div class="input-container">
+                <label for="boat-speed">Kecepatan Perahu (m/s): </label>
+                <input type="range" id="boat-speed" min="1" max="10" step="1" value="5" oninput="updateSpeedValue(this.value)">
+                <span id="speed-value">5 m/s</span> <!-- Displays the current slider value -->
+                <button onclick="startSimulation()">Mulai Simulasi</button>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <p id="result-message"></p>
+        </div>
+    </section>
+</main>
+
+<!-- !Footer -->
+<footer>
+    <p>&copy; 2024 Virtual Lab Gajah. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
