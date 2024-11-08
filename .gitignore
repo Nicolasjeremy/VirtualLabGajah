@@ -1,0 +1,22 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Environment Variables
+.env
+back.env
+
+# Firebase Config or Service Account Keys
+# virtual-lab-gajah-firebase-adminsdk-1mpza-5f945df1a8.json
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp

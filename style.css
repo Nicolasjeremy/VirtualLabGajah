@@ -1,10 +1,8 @@
-
 :root {
-    --font-primary: 'Arial', sans-serif;
-    --color-white: #E4DEC8;
-    --color-black: #3D3D3D;
     --color-primary: #F87666;
     --color-secondary: #658E9C;
+    --color-background: #E4DEC8;
+    --color-text: #3D3D3D;
 }
 
 * {
@@ -14,45 +12,15 @@
 }
 
 body {
-    scroll-snap-type: y mandatory;
-    -webkit-scroll-snap-type: y mandatory;
-    -ms-scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-    scroll-behavior: smooth;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
 
-section {
-    scroll-snap-align: start;
-    min-height: 105vh;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-.scroll-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--color-primary);
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.scroll-button:hover {
-    background-color: var(--color-secondary);
-}
-
-.land {
-    background-color: var(--color-white);
+.header {
     text-align: center;
-    padding: 50px 20px;
-    position: relative;
+    padding: 4rem 2rem;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -60,115 +28,81 @@ html {
     align-items: center;
 }
 
-.land h1 {
-    font-size: 48px;
-    color: var(--color-black);
-    margin-bottom: 20px;
-}
+.header h1 { font-size: 3rem; margin-bottom: 1rem; }
+.header p { font-size: 1.2rem; max-width: 600px; margin-bottom: 2rem; }
 
-.land p {
-    font-size: 18px;
-    color: var(--color-black);
-    width: 60%;
-    margin: 0 auto;
-    line-height: 1.8;
-}
-
-.tutorial {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 50px;
-    background-color: var(--color-black);
-    color: var(--color-white);
-    min-height: 100vh;
-    align-items:stretch;
-    justify-content: space-between;
-}
-
-.left-text, .right-tutorial {
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.left-text {
-    flex: 4;
-    background-color: #E4DEC84D;
-    padding: 5vh;
-    border-radius: 20px;
-}
-
-.left-text p {
-    font-size: 18px;
-    color: var(--color-white);
-}
-
-.right-tutorial {
-    flex: 8;
-}
-
-.relative-motion-lab {
-    text-align: center;
-    padding: 20px;
-    background-color: var(--color-white);
-    color: var(--color-black);
-}
-
-.simulation-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 80%;
-}
-
-#river-simulation {
-    width: 80%;
-    height: auto;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-}
-
-.input-container {
-    margin-top: 10px;
-}
-
-.result-container {
-    margin-top: 20px;
-    font-weight: bold;
-}
-
-button {
-    margin-left: 10px;
-    padding: 10px;
+.btn {
+    padding: 0.8rem 1.5rem;
     background-color: var(--color-primary);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
-button:hover {
+.btn:hover {
     background-color: var(--color-secondary);
 }
 
-footer {
-    background-color: var(--color-black);
-    color: var(--color-white);
+.auth-container {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.user-info {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.simulation {
+    padding: 2rem;
     text-align: center;
-    padding: 20px;
-    font-size: 14px;
+    min-height: 100vh;
+}
+
+.simulation canvas {
+    max-width: 100%;
+    margin: 2rem auto;
+    border: 1px solid #ccc;
+}
+
+.controls {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.tutorial {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    background: var(--color-text);
+    color: var(--color-background);
 }
 
 @media (max-width: 768px) {
     .tutorial {
-        flex-direction: column;
-    }
-    .left-text, .right-tutorial {
-        width: 100%;
-    }
-    #river-simulation {
-        width: 90%;
+        grid-template-columns: 1fr;
     }
 }
