@@ -1,3 +1,4 @@
+/* style.css */
 :root {
     --color-primary: #F87666;
     --color-secondary: #658E9C;
@@ -30,6 +31,19 @@ body {
 
 .header h1 { font-size: 3rem; margin-bottom: 1rem; }
 .header p { font-size: 1.2rem; max-width: 600px; margin-bottom: 2rem; }
+
+.coin-counter {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-primary);
+}
 
 .btn {
     padding: 0.8rem 1.5rem;

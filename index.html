@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +11,12 @@
     <header class="header">
         <h1>GAJAH</h1>
         <p>"Education is the most powerful weapon which you can use to change the world."</p>
+        <p id="user-greeting" style="display: none;"></p> <!-- Placeholder for greeting -->
         <button class="btn" onclick="auth.showLogin()">Login to Access</button>
     </header>
+    
 
-    <div id="auth-container" class="auth-container">
+    <div id="auth-container" class="auth-container" style="display: none;">
         <div class="auth-card">
             <div id="firebaseui-auth"></div>
             <button class="btn" onclick="auth.hideLogin()">Back</button>
@@ -41,6 +44,8 @@
         </section>
 
         <section class="simulation">
+            <div id="coin-counter" class="coin-counter">Coins: 0</div>
+
             <h2>Lab Virtual: Gerakan Relatif - Menyeberangi Sungai</h2>
             <canvas id="simulation-canvas" width="1000" height="600"></canvas>
             
