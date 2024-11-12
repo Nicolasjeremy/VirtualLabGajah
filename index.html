@@ -1,11 +1,11 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Lab Gajah</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Update the path to your CSS file -->
+    <link rel="stylesheet" href="./virtual-lab-frontend/style.css">
 </head>
 <body>
     <header class="header">
@@ -15,7 +15,7 @@
         <button class="btn" onclick="auth.showLogin()">Login to Access</button>
     </header>
     
-
+    <!-- Update path to Firebase UI CSS -->
     <div id="auth-container" class="auth-container" style="display: none;">
         <div class="auth-card">
             <div id="firebaseui-auth"></div>
@@ -61,10 +61,11 @@
         </section>
     </main>
 
+    <!-- Update script paths -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
-    <script src="script.js"></script>
+    <script src="./virtual-lab-frontend/script.js"></script> <!-- Updated path -->
 </body>
 </html>
